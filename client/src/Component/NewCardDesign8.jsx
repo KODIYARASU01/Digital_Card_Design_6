@@ -32,8 +32,40 @@ import qrcode from "../assets/DigiCard_8/qr.svg";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
-
+import vCardsJS from "vcards-js";
 const NewCardDesign8 = () => {
+  let [share, setShare] = useState(false);
+  //create a new vCard
+  var vCard = vCardsJS();
+
+  function generateVCF() {
+    //set properties
+    vCard.firstName = "Jayakumar";
+    vCard.middleName = "";
+    vCard.lastName = "V";
+    vCard.organization = "Aristostech India Private Limited,CEO";
+    vCard.photo.attachFromUrl(
+      "https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?t=st=1714999372~exp=1715002972~hmac=148ead13ab2f0dc4db7268fb984501266e0547e55d0bd1a6918e3e51ca5a5af4&w=740",
+      "JPEG"
+    );
+    vCard.workPhone = "+91 9344482370";
+    vCard.birthday = new Date(1985, 0, 1);
+    vCard.title = "Bussiness Man";
+    vCard.url = "https://www.aristostechindia.com/";
+    vCard.note = "Notes on Eric";
+
+    //save to file
+    // vCard.saveToFile('./eric-nesser.vcf');
+    const linkElement = document.createElement("a");
+    linkElement.setAttribute("href", `data:,${vCard.getFormattedString()}`);
+    linkElement.setAttribute("download", "card.vcf");
+    linkElement.style.display = "none";
+    document.body.appendChild(linkElement);
+    linkElement.click();
+    document.body.removeChild(linkElement);
+  }
+
+
   // your custom dot component with prop `isActive`
 const MyDot = ({ isActive }) => (
   <span
@@ -372,6 +404,11 @@ const MyDot = ({ isActive }) => (
                   <h6>Chennai , Tamil Nadu</h6>
                   </div>
                 </div>
+              </div>
+              <div className="add_to_contact">
+                <button onClick={generateVCF}>
+                  <i className="bx bxs-contact"></i>Add To Contact
+                </button>
               </div>
              </div>
              {/* Gallery */}

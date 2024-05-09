@@ -34,7 +34,7 @@
     z-index: 900;
     position: absolute;
     background-color: #181b20;
-    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 4px 5px #00000080);
     z-index: 300;
 
 .card8_box1{
@@ -251,6 +251,48 @@ margin: auto;
 
   }
 }
+.add_to_contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+
+  button {
+    width: 50%;
+    padding: 10px 1rem;
+    outline: none;
+    border: transparent;
+    background: transparent;
+    box-shadow: inset 0px 7px 22px 6px rgba(247, 247, 247, 0.1),0px 1px 10px -3px rgba(250, 250, 250, 0.1);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 550;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.4s ease-in-out;
+    i {
+      color: #f59c5c;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #2e2e2e;
+      filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+      transition: all 0.4s ease-in-out;
+
+      i{
+        color: #2e2e2e;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+}
 }
 // Gallery`
 .card8_box5{
@@ -308,7 +350,7 @@ margin: auto;
         margin: auto;
         width: 100%;
         height: 100%;
-        background-color: #ffffffb4;
+        background-color: #181b20;
 
         // display: none;
 
@@ -340,8 +382,8 @@ margin: auto;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 80%;
-          height: 300px;
+          width: 60%;
+          height: 200px;
           filter: drop-shadow(0px 4px 5px rgba(0,0,0,0.5));
           border-radius: 10px;
           z-index: 1000;
@@ -1843,7 +1885,7 @@ padding: 0px 2rem;
     p {
       padding-top: 20px;
       font-size: 0.8rem;
-      color: #fff;
+      color: #141414;
       font-weight: 550;
 
       @media (max-width:600px){
