@@ -8,10 +8,11 @@
 .newCard_design8_container {
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/DigiCard_8/main_background.jpg);
+  // background-image: url('https://img.freepik.com/free-photo/top-view-delicious-meat-table_23-2150857806.jpg?t=st=1715257630~exp=1715261230~hmac=dfbafad90348b0a77e62056d8993e255a3cc02b18db849e4bcb692df8f8c09a4&w=1060');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ background: linear-gradient(280deg,#c2ffeb ,#b0ffd7);
 
   display: flex;
   font-family: "Poppins";

@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./NewCardDesign8.scss";
 import { Link, useParams } from "react-router-dom";
-import banner_img from '../assets/DigiCard_8/banner1.jpg';
-import avatar_img from '../assets/DigiCard_8/logo2.jpg';
+import banner_img from "../assets/DigiCard_8/banner1.jpg";
+import avatar_img from "../assets/DigiCard_8/logo2.jpg";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "react-quill/dist/quill.snow.css";
 // import Carousel from 'better-react-carousel';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Confetti from "react-confetti";
@@ -21,12 +21,10 @@ import "react-slideshow-image/dist/styles.css";
 // import Carousel1 from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 
-
 //QRCODE:
 
 import qrcode from "../assets/DigiCard_8/qr.svg";
 //Testimonial
-
 
 // ProductSlider
 import AwesomeSlider from "react-awesome-slider";
@@ -65,18 +63,17 @@ const NewCardDesign8 = () => {
     document.body.removeChild(linkElement);
   }
 
-
   // your custom dot component with prop `isActive`
-const MyDot = ({ isActive }) => (
-  <span
-    style={{
-      display: 'inline-block',
-      height: isActive ? '8px' : '5px',
-      width: isActive ? '8px' : '5px',
-      background: '#1890ff'
-    }}
-  ></span>
-);
+  const MyDot = ({ isActive }) => (
+    <span
+      style={{
+        display: "inline-block",
+        height: isActive ? "8px" : "5px",
+        width: isActive ? "8px" : "5px",
+        background: "#1890ff",
+      }}
+    ></span>
+  );
 
   let [serviceLoad, setServiceLoad] = useState(false);
 
@@ -291,8 +288,6 @@ const MyDot = ({ isActive }) => (
     });
   }
 
-
-
   //openFullImage preview:
   function openFullImage(pic) {
     let fullImageBox = document.getElementById("fullImageBox");
@@ -306,35 +301,38 @@ const MyDot = ({ isActive }) => (
     let fullImageBox = document.getElementById("fullImageBox");
 
     fullImageBox.style.display = "none";
-  };
-    // Create a ref for the element you want to scroll to
-    const targetRef = useRef(null);
+  }
+  // Create a ref for the element you want to scroll to
+  const targetRef = useRef(null);
 
-    // Function to handle image click
-    const handleImageClick = () => {
-      // Scroll to the target element
-      targetRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
+  // Function to handle image click
+  const handleImageClick = () => {
+    // Scroll to the target element
+    targetRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <div className="newCard_design8_container">
         <div id="card_design_box8">
-             {/* Banner */}
+          {/* Banner */}
 
-             <div className="card8_box1">
-                <img className="banner" src={banner_img} alt="banner" />
-                <div className="overlay"></div>
-                <img className="logo" src={avatar_img} alt="logo" />
+          <div className="card8_box1">
+            <img className="banner" src='https://img.freepik.com/free-photo/delicious-pizza-with-tomatoes_23-2150857784.jpg?t=st=1715257451~exp=1715261051~hmac=42b841b1684bef8b956f5c46e09c422fde847fb1d055e355921ebf768a63955a&w=1060' alt="banner" />
+            <div className="overlay"></div>
+            <img
+              className="logo"
+              src="https://img.freepik.com/free-photo/view-cartoon-male-chef-with-delicious-3d-pizza_23-2151017656.jpg?t=st=1715257406~exp=1715261006~hmac=77ff8d287a1e47c45f8c6fa3135c546439b409d11df1d47018de310321deeea3&w=826"
+              alt="logo"
+            />
 
-                <div className="user_detail">
-                    <h4>Thirupathii</h4>
-                    <small>Executive Chef</small>
-                </div>
-         
-             </div>
-             {/* SocialMedia */}
-             <div className="card8_box2">
-             <div className="social_medias">
+            <div className="user_detail">
+              <h4>Thirupathii</h4>
+              <small>Executive Chef</small>
+            </div>
+          </div>
+          {/* SocialMedia */}
+          <div className="card8_box2">
+            <div className="social_medias">
               <a href="#">
                 <i className="bx bxl-facebook"></i>
               </a>
@@ -354,69 +352,74 @@ const MyDot = ({ isActive }) => (
                 <i className="bx bxl-youtube"></i>
               </a>
             </div>
-             </div>
-             {/* Summary`` */}
-             <div className="card8_box3">
-              <div className="summary">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aliquid inventore minus dolore excepturi animi error beatae temporibus. Nihil atque alias et odit beatae dicta rem maxime officia cupiditate vitae.</p>
-              </div>
-             </div>
-             {/* Contact */}
-             <div className="card8_box4">
-              <div className="contact_title">
-                <h4>Contact</h4>
-              </div>
+          </div>
+          {/* Summary`` */}
+          <div className="card8_box3">
+            <div className="summary">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos, aliquid inventore minus dolore excepturi animi
+                error beatae temporibus. Nihil atque alias et odit beatae dicta
+                rem maxime officia cupiditate vitae.
+              </p>
+            </div>
+          </div>
+          {/* Contact */}
+          <div className="card8_box4">
+            <div className="contact_title">
+              <h4>Contact</h4>
+            </div>
 
-              <div className="contact_container">
-                <div className="contact_box">
-                  <div className="icon">
-                  <i className='bx bxs-envelope'></i>
-                  </div>
-                  <div className="contact_detail">
+            <div className="contact_container">
+              <div className="contact_box">
+                <div className="icon">
+                  <i className="bx bxs-envelope"></i>
+                </div>
+                <div className="contact_detail">
                   <small>E-mail Address</small>
                   <h6>kodiyarasu01@gmail.com</h6>
-                  </div>
                 </div>
-                <div className="contact_box">
-                  <div className="icon">
-                  <i className='bx bx-mobile'></i>
-                  </div>
-                  <div className="contact_detail">
+              </div>
+              <div className="contact_box">
+                <div className="icon">
+                  <i className="bx bx-mobile"></i>
+                </div>
+                <div className="contact_detail">
                   <small>Mobile Number</small>
                   <h6>+91 4564646546</h6>
-                  </div>
                 </div>
-                <div className="contact_box">
-                  <div className="icon">
-                  <i className='bx bxs-party' ></i>
-                  </div>
-                  <div className="contact_detail">
+              </div>
+              <div className="contact_box">
+                <div className="icon">
+                  <i className="bx bxs-party"></i>
+                </div>
+                <div className="contact_detail">
                   <small>Date Of Birth</small>
                   <h6>26-01-2000</h6>
-                  </div>
                 </div>
-                <div className="contact_box">
-                  <div className="icon">
-                  <i className='bx bxs-location-plus' ></i>
-                  </div>
-                  <div className="contact_detail">
+              </div>
+              <div className="contact_box">
+                <div className="icon">
+                  <i className="bx bxs-location-plus"></i>
+                </div>
+                <div className="contact_detail">
                   <small>Address</small>
                   <h6>Chennai , Tamil Nadu</h6>
-                  </div>
                 </div>
               </div>
-              <div className="add_to_contact">
-                <button onClick={generateVCF}>
-                  <i className="bx bxs-contact"></i>Add To Contact
-                </button>
-              </div>
-             </div>
-             {/* Gallery */}
-             <div className="card8_box5">
-              <div className="gallery_title">
-                <h4>Gallery</h4>
-              </div>
-              <div className="gallery_container">
+            </div>
+            <div className="add_to_contact">
+              <button onClick={generateVCF}>
+                <i className="bx bxs-contact"></i>Add To Contact
+              </button>
+            </div>
+          </div>
+          {/* Gallery */}
+          <div className="card8_box5">
+            <div className="gallery_title">
+              <h4>Gallery</h4>
+            </div>
+            <div className="gallery_container">
               <div className="full_image" id="fullImageBox">
                 <div className="close_Full_Image_gallery">
                   <i
@@ -443,7 +446,6 @@ const MyDot = ({ isActive }) => (
                   onClick={(e) => openFullImage(e.target.src)}
                 />
               </div>
-          
 
               <div className="col_3">
                 <img
@@ -463,39 +465,45 @@ const MyDot = ({ isActive }) => (
                 />
               </div>
             </div>
-             </div>
-             {/* Services */}
-             <div className="card8_box6">
-              <div className="service_title">
-                <h4>Our Services</h4>
-              </div>
-              <div className="service_container">
-                <div className="service_box">
-                  <div className="icon">
-                  <i className='bx bxs-bowl-hot' ></i>
-                  </div>
-                  <div className="details">
-                    <h4>Cooking</h4>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eveniet sunt tempore ducimus, repellat consequuntur?</small>
-                  </div>
+          </div>
+          {/* Services */}
+          <div className="card8_box6">
+            <div className="service_title">
+              <h4>Our Services</h4>
+            </div>
+            <div className="service_container">
+              <div className="service_box">
+                <div className="icon">
+                  <i className="bx bxs-bowl-hot"></i>
                 </div>
-                <div className="service_box">
-                  <div className="icon">
+                <div className="details">
+                  <h4>Cooking</h4>
+                  <small>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum eveniet sunt tempore ducimus, repellat consequuntur?
+                  </small>
+                </div>
+              </div>
+              <div className="service_box">
+                <div className="icon">
                   <i className="uil uil-user-md"></i>
-                  </div>
-                  <div className="details">
-                    <h4>Catering Services</h4>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eveniet sunt tempore ducimus, repellat consequuntur?</small>
-                  </div>
+                </div>
+                <div className="details">
+                  <h4>Catering Services</h4>
+                  <small>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum eveniet sunt tempore ducimus, repellat consequuntur?
+                  </small>
                 </div>
               </div>
-              </div>
-              {/* Testimonial */}
-              <div className="card8_box7">
-              <div className="testimonial_title">
-                <h4>Testimonials</h4>
-              </div>
-              <div className="Testimonial8">
+            </div>
+          </div>
+          {/* Testimonial */}
+          <div className="card8_box7">
+            <div className="testimonial_title">
+              <h4>Testimonials</h4>
+            </div>
+            <div className="Testimonial8">
               <div className="testimonial_box">
                 <Carousel autoPlay="true" className="carousel">
                   <div className="testimonial5_details">
@@ -535,13 +543,13 @@ const MyDot = ({ isActive }) => (
                 </Carousel>
               </div>
             </div>
-              </div>
-              {/* Products */}
-              <div className="card8_box8">
-              <div className="product_title">
-                <h4>Our Products</h4>
-              </div>
-              <div className="product_container">
+          </div>
+          {/* Products */}
+          <div className="card8_box8">
+            <div className="product_title">
+              <h4>Our Products</h4>
+            </div>
+            <div className="product_container">
               <div className="product_box" onClick={handleImageClick}>
                 <div className="product_image">
                   <img
@@ -551,7 +559,6 @@ const MyDot = ({ isActive }) => (
                 </div>
                 <div className="product_title">
                   <h3>Chicken Briyani</h3>
-                
                 </div>
                 <div className="product_summary">
                   <small>
@@ -559,7 +566,7 @@ const MyDot = ({ isActive }) => (
                   </small>
                 </div>
                 <div className="product_price">
-                <small>₹ 500</small>
+                  <small>₹ 500</small>
                 </div>
               </div>
               <div className="product_box" onClick={handleImageClick}>
@@ -571,7 +578,6 @@ const MyDot = ({ isActive }) => (
                 </div>
                 <div className="product_title">
                   <h3>Mutton Briyani</h3>
-              
                 </div>
                 <div className="product_summary">
                   <small>
@@ -579,7 +585,7 @@ const MyDot = ({ isActive }) => (
                   </small>
                 </div>
                 <div className="product_price">
-                <small>₹ 500</small>
+                  <small>₹ 500</small>
                 </div>
               </div>
               <div className="product_box" onClick={handleImageClick}>
@@ -591,7 +597,6 @@ const MyDot = ({ isActive }) => (
                 </div>
                 <div className="product_title">
                   <h3>Full Meals</h3>
-                 
                 </div>
                 <div className="product_summary">
                   <small>
@@ -599,7 +604,7 @@ const MyDot = ({ isActive }) => (
                   </small>
                 </div>
                 <div className="product_price">
-                <small>₹ 500</small>
+                  <small>₹ 500</small>
                 </div>
               </div>
               <div className="product_box" onClick={handleImageClick}>
@@ -611,7 +616,6 @@ const MyDot = ({ isActive }) => (
                 </div>
                 <div className="product_title">
                   <h3>Breakfast Items</h3>
-              
                 </div>
                 <div className="product_summary">
                   <small>
@@ -619,17 +623,17 @@ const MyDot = ({ isActive }) => (
                   </small>
                 </div>
                 <div className="product_price">
-                <small>₹ 500</small>
+                  <small>₹ 500</small>
                 </div>
               </div>
             </div>
-              </div>
-              {/* Appoinment */}
-              <div className="card8_box9">
-              <div className="appoinment_title">
-                <h4>Book Appoinment</h4>
-              </div>
-              <div className="appoinment_container">
+          </div>
+          {/* Appoinment */}
+          <div className="card8_box9">
+            <div className="appoinment_title">
+              <h4>Book Appoinment</h4>
+            </div>
+            <div className="appoinment_container">
               <form action="">
                 <div className="form_group">
                   <label htmlFor="date">Date</label>
@@ -641,7 +645,7 @@ const MyDot = ({ isActive }) => (
                   />
                 </div>
                 <div className="form_group">
-                <label htmlFor="date">Hour</label>
+                  <label htmlFor="date">Hour</label>
                   <div className="times">
                     <input
                       className="time_input"
@@ -680,325 +684,331 @@ const MyDot = ({ isActive }) => (
 
                 <div className="form_submit">
                   <button>
-                  <i className='bx bx-subdirectory-right'></i>
+                    <i className="bx bx-subdirectory-right"></i>
                     Book Appoinment
                   </button>
                 </div>
               </form>
             </div>
-              </div>
-              {/* QRCode */}
-              <div className="card8_box10">
-              <div className="qrcode_title">
-                <h4>QR Code</h4>
-              </div>
-              <div className="qrcode_container">
+          </div>
+          {/* QRCode */}
+          <div className="card8_box10">
+            <div className="qrcode_title">
+              <h4>QR Code</h4>
+            </div>
+            <div className="qrcode_container">
               <div className="qrcode_box">
-               
                 <div className="qrcode">
                   <img src={qrcode} alt="qrcode" />
                 </div>
               </div>
             </div>
-              </div>
-              {/* Feedback */}
-              <div className="card8_box11">
-              <div className="feedback_title">
-                <h4>Feedback</h4>
-              </div>
-              <div className="feedback_container8">
-         
-            
-         <form action="" onSubmit={feedbackFormik.handleSubmit}>
-       
-           <div className="form_group">
-             <label
-               htmlFor="clientName_Input"
-               className={`${
-                 feedbackFormik.errors.userName ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.userName &&
-               feedbackFormik.errors.userName
-                 ? feedbackFormik.errors.userName
-                 : "Your Name"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <input
-               type="text"
-               placeholder="Enter Your Name"
-               name="userName"
-               id="userName"
-               // value={userName}
-               // onChange={(e)=>setUserName(e.target.value)}
-               value={feedbackFormik.values.userName}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             />
-           </div>
-           <div className="form_group">
-             <label
-               htmlFor="clientFeedBack_Input"
-               className={`${
-                 feedbackFormik.errors.userFeedback ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.userFeedback &&
-               feedbackFormik.errors.userFeedback
-                 ? feedbackFormik.errors.userFeedback
-                 : "Your FeedBack"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <textarea
-               id="userFeedback"
-               name="userFeedback"
-               cols="30"
-               rows="7"
-               placeholder="Enter your Feedback"
-               // value={userFeedback}
-               // onChange={(e)=>setUserFeedback(e.target.value)}
-               value={feedbackFormik.values.userFeedback}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             ></textarea>
-           </div>
-           <div className="form_group">
-             <label
-               htmlFor="clientName_Input"
-               className={`${
-                 feedbackFormik.errors.currentRatting ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.currentRatting &&
-               feedbackFormik.errors.currentRatting
-                 ? feedbackFormik.errors.currentRatting
-                 : "Ratting"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <div
-               className="ratting_container"
-               data-rating="0"
-               name="currentRatting"
-               id="currentRatting"
-               onMouseOver={handleRatting}
-               onMouseLeave={removeRatting}
-               onClick={RattingSetted}
-               // value={currentRatting}
-               // onChange={(e)=>setCurrentRatting(e.target.value)}
-               value={feedbackFormik.values.currentRatting}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             >
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="1"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="2"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="3"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="4"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="5"></i>
-               </span>
-             </div>
-           </div>
-           <div className="form_actions">
-             <button type="submit">
-               <img
-                 width="48"
-                 height="48"
-                 src="https://img.icons8.com/fluency/48/send-comment.png"
-                 alt="send-comment"
-               />
-               Send Feedback
-             </button>
-           </div>
-         </form>
-       </div>
-          {/* //Feedback messages */}
-          <div className="Feedback_container">
-                <div className="feeback_title">
-                  {commentOpen ? (
-                    <button onClick={() => setCommentOpen(false)}>
-                      <i className="uil uil-feedback"></i>
-                      Hide All Feedbacks
-                    </button>
-                  ) : (
-                    <button onClick={() => setCommentOpen(true)}>
-                      <i className="uil uil-feedback"></i>See All Feedbacks
-                    </button>
-                  )}
-
-                  {feedbackLoader ? (
-                    <span className="feedBack_loader"></span>
-                  ) : (
-                    ""
-                  )}
+          </div>
+          {/* Feedback */}
+          <div className="card8_box11">
+            <div className="feedback_title">
+              <h4>Feedback</h4>
+            </div>
+            <div className="feedback_container8">
+              <form action="" onSubmit={feedbackFormik.handleSubmit}>
+                <div className="form_group">
+                  <label
+                    htmlFor="clientName_Input"
+                    className={`${
+                      feedbackFormik.errors.userName ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.userName &&
+                    feedbackFormik.errors.userName
+                      ? feedbackFormik.errors.userName
+                      : "Your Name"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter Your Name"
+                    name="userName"
+                    id="userName"
+                    // value={userName}
+                    // onChange={(e)=>setUserName(e.target.value)}
+                    value={feedbackFormik.values.userName}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  />
                 </div>
-
-                {commentOpen ? (
-                  <div className="comment_box">
-                    {AllFeedBacks.map((data, index) => {
-                      return (
-                        <div className="message" key={index}>
-                          <div className="user_detail">
-                            <div className="profile">
-                              <img src={profile} alt="profile" />
-                            </div>
-                            <div className="details">
-                              <div className="userName">
-                                <p>
-                                  {data.userName}
-                                  <i className="bx bxs-user-check"></i>
-                                </p>
-                              </div>
-                              <div className="stars">
-                                <div
-                                  className="ratting_container1"
-                                  data-rating={data.currentRatting}
-                                  name="currentRatting"
-                                  // id="currentRatting"
-                                  id={
-                                    data.currentRatting == 0
-                                      ? "noRatting"
-                                      : "" || data.currentRatting == 1
-                                      ? "singleRatting"
-                                      : "" || data.currentRatting == 2
-                                      ? "doubleRatting"
-                                      : "" || data.currentRatting == 3
-                                      ? "ThreeRatting"
-                                      : "" || data.currentRatting == 4
-                                      ? "fourRatting"
-                                      : "" || data.currentRatting == 5
-                                      ? "fullRatting"
-                                      : ""
-                                  }
-                                  value={data.currentRatting}
-                                >
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="1"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="2"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="3"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="4"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="5"
-                                    ></i>
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="comments">
-                            <i className="bx bx-chat"></i>
-                            <span>{data.userFeedback}</span>
-                          </div>
-                        </div>
-                      );
-                    })}
+                <div className="form_group">
+                  <label
+                    htmlFor="clientFeedBack_Input"
+                    className={`${
+                      feedbackFormik.errors.userFeedback ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.userFeedback &&
+                    feedbackFormik.errors.userFeedback
+                      ? feedbackFormik.errors.userFeedback
+                      : "Your FeedBack"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <textarea
+                    id="userFeedback"
+                    name="userFeedback"
+                    cols="30"
+                    rows="7"
+                    placeholder="Enter your Feedback"
+                    // value={userFeedback}
+                    // onChange={(e)=>setUserFeedback(e.target.value)}
+                    value={feedbackFormik.values.userFeedback}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  ></textarea>
+                </div>
+                <div className="form_group">
+                  <label
+                    htmlFor="clientName_Input"
+                    className={`${
+                      feedbackFormik.errors.currentRatting ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.currentRatting &&
+                    feedbackFormik.errors.currentRatting
+                      ? feedbackFormik.errors.currentRatting
+                      : "Ratting"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <div
+                    className="ratting_container"
+                    data-rating="0"
+                    name="currentRatting"
+                    id="currentRatting"
+                    onMouseOver={handleRatting}
+                    onMouseLeave={removeRatting}
+                    onClick={RattingSetted}
+                    // value={currentRatting}
+                    // onChange={(e)=>setCurrentRatting(e.target.value)}
+                    value={feedbackFormik.values.currentRatting}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  >
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="1"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="2"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="3"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="4"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="5"></i>
+                    </span>
                   </div>
+                </div>
+                <div className="form_actions">
+                  <button type="submit">
+                    <img
+                      width="48"
+                      height="48"
+                      src="https://img.icons8.com/fluency/48/send-comment.png"
+                      alt="send-comment"
+                    />
+                    Send Feedback
+                  </button>
+                </div>
+              </form>
+            </div>
+            {/* //Feedback messages */}
+            <div className="Feedback_container">
+              <div className="feeback_title">
+                {commentOpen ? (
+                  <button onClick={() => setCommentOpen(false)}>
+                    <i className="uil uil-feedback"></i>
+                    Hide All Feedbacks
+                  </button>
+                ) : (
+                  <button onClick={() => setCommentOpen(true)}>
+                    <i className="uil uil-feedback"></i>See All Feedbacks
+                  </button>
+                )}
+
+                {feedbackLoader ? (
+                  <span className="feedBack_loader"></span>
                 ) : (
                   ""
                 )}
               </div>
-              </div>
-              {/* Inquries */}
-              <div className="card8_box12" ref={targetRef}>
-              <div className="inquries_title">
-                <h4>Inquries</h4>
-              </div>
-              <div className="inquiries_container5">
-            
-            <form action="">
-              <div className="form_group">
-                <label htmlFor="name">
-                  Name <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="text" placeholder="Your Name" />
-                  <i className='bx bxs-user-pin'></i>
+
+              {commentOpen ? (
+                <div className="comment_box">
+                  {AllFeedBacks.map((data, index) => {
+                    return (
+                      <div className="message" key={index}>
+                        <div className="user_detail">
+                          <div className="profile">
+                            <img src={profile} alt="profile" />
+                          </div>
+                          <div className="details">
+                            <div className="userName">
+                              <p>
+                                {data.userName}
+                                <i className="bx bxs-user-check"></i>
+                              </p>
+                            </div>
+                            <div className="stars">
+                              <div
+                                className="ratting_container1"
+                                data-rating={data.currentRatting}
+                                name="currentRatting"
+                                // id="currentRatting"
+                                id={
+                                  data.currentRatting == 0
+                                    ? "noRatting"
+                                    : "" || data.currentRatting == 1
+                                    ? "singleRatting"
+                                    : "" || data.currentRatting == 2
+                                    ? "doubleRatting"
+                                    : "" || data.currentRatting == 3
+                                    ? "ThreeRatting"
+                                    : "" || data.currentRatting == 4
+                                    ? "fourRatting"
+                                    : "" || data.currentRatting == 5
+                                    ? "fullRatting"
+                                    : ""
+                                }
+                                value={data.currentRatting}
+                              >
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="1"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="2"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="3"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="4"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="5"
+                                  ></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="comments">
+                          <i className="bx bx-chat"></i>
+                          <span>{data.userFeedback}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="email">
-                  Email <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="email" placeholder="Your Email" />
-                  <i className='bx bxs-envelope' ></i>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
+          {/* Inquries */}
+          <div className="card8_box12" ref={targetRef}>
+            <div className="inquries_title">
+              <h4>Inquries</h4>
+            </div>
+            <div className="inquiries_container5">
+              <form action="">
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Name <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="text" placeholder="Your Name" />
+                    <i className="bx bxs-user-pin"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="name">
-                  Phone <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="tel" placeholder="Enter Phone Number" />
-                  <i className='bx bxs-phone-call' ></i>
+                <div className="form_group">
+                  <label htmlFor="email">
+                    Email <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="email" placeholder="Your Email" />
+                    <i className="bx bxs-envelope"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="name">
-                  Message <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="5"
-                    placeholder="Enter Your Message Here..."
-                  ></textarea>
-    <i class='bx bxs-message-dots' ></i>
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Phone <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="tel" placeholder="Enter Phone Number" />
+                    <i className="bx bxs-phone-call"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_actions">
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Message <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="5"
+                      placeholder="Enter Your Message Here..."
+                    ></textarea>
+                    <i class="bx bxs-message-dots"></i>
+                  </div>
+                </div>
+                <div className="form_actions">
                   <button type="submit">
-                  <img width="48" height="48" src="https://img.icons8.com/fluency/48/submit-for-approval.png" alt="submit-for-approval"/>
-                   Submit
+                    <img
+                      width="48"
+                      height="48"
+                      src="https://img.icons8.com/fluency/48/submit-for-approval.png"
+                      alt="submit-for-approval"
+                    />
+                    Submit
                   </button>
                 </div>
-            </form>
-          </div>
-              </div>
-               {/* Footer */}
-            <div className="card8_box_13">
-            <div className="footer_container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffb545" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,128C840,117,960,139,1080,128C1200,117,1320,75,1380,53.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-                <p>All Copyright Reserved &copy; 2024 myvirtualcard.in</p>
-                </div>
+              </form>
             </div>
+          </div>
+          {/* Footer */}
+          <div className="card8_box_13">
+            <div className="footer_container">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                  fill="#ffb545"
+                  fill-opacity="1"
+                  d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,128C840,117,960,139,1080,128C1200,117,1320,75,1380,53.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+                ></path>
+              </svg>
+              <p>All Copyright Reserved &copy; 2024 myvirtualcard.in</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
